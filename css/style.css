@@ -1,0 +1,239 @@
+/* =========================================================
+   1. الإعدادات العامة والخطوط
+   ========================================================= */
+
+/* تنسيق الجسم العام للموقع وتحديد الخط الافتراضي */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* تحديد نوع الخط المستخدم في كامل الموقع */
+    overflow-x: hidden; /* منع ظهور تمرير أفقي عند خروج عناصر عن عرض الصفحة */
+}
+
+
+/* =========================================================
+   2. شاشة البداية (Splash Screen)
+   ========================================================= */
+
+/* الحاوية الرئيسية لشاشة البداية */
+#splash-screen {
+    position: fixed;              /* تثبيت الشاشة فوق الصفحة وعدم تحركها عند التمرير */
+    top: 0;                       /* محاذاة العنصر مع أعلى الشاشة */
+    left: 0;                      /* محاذاة العنصر مع يسار الشاشة */
+    width: 100%;                  /* جعل العرض يغطي كامل الشاشة */
+    height: 100vh;                /* جعل الارتفاع يغطي كامل نافذة العرض */
+    background-color: #ffffff;    /* تعيين خلفية بيضاء */
+    display: flex;                /* تفعيل Flexbox لتسهيل التوسيط */
+    justify-content: center;      /* توسيط المحتوى أفقياً */
+    align-items: center;          /* توسيط المحتوى عمودياً */
+    z-index: 9999;                /* ضمان ظهور الشاشة فوق جميع العناصر */
+    transition: opacity 0.5s ease-out; /* إضافة تأثير اختفاء تدريجي */
+}
+
+/* تنسيق شعار شاشة البداية */
+#splash-logo {
+    width: 50px;                  /* تحديد حجم الشعار الابتدائي */
+    animation: scaleUp 1.5s forwards ease-in-out; /* تطبيق حركة تكبير الشعار */
+}
+
+/* حركة تكبير الشعار مع زيادة الوضوح */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);      /* بداية الشعار بالحجم الطبيعي */
+        opacity: 0.5;             /* جعل الشعار شبه شفاف في البداية */
+    }
+    100% {
+        transform: scale(5);      /* تكبير الشعار خمس مرات */
+        opacity: 1;               /* جعل الشعار واضح بالكامل */
+    }
+}
+
+
+/* =========================================================
+   3. الترويسة والشعار (Header & Logo)
+   ========================================================= */
+
+/* تنسيق شعار الموقع داخل شريط التنقل */
+.navbar-brand img {
+    width: 100px;                  /* تحديد عرض الشعار الافتراضي */
+    height: auto;                 /* الحفاظ على تناسب الأبعاد */
+    transition: transform 0.3s ease; /* إضافة حركة سلسة عند التكبير */
+}
+
+/* تأثير تكبير بسيط عند تمرير المؤشر على الشعار */
+.navbar-brand img:hover { 
+    transform: scale(1.05); /* تكبير الشعار بنسبة بسيطة عند التحويم */
+}
+
+/* تصغير الشعار تلقائيًا في الشاشات الصغيرة */
+@media (max-width: 768px) { /* تطبيق التنسيق على الشاشات الصغيرة فقط */
+    .navbar-brand img {
+        width: 60px;              /* تصغير حجم الشعار ليتناسب مع الجوال */
+    }
+}
+
+/* تأثيرات انتقال الهيدر أثناء التمرير */
+header.sticky-top {
+    transition: all 0.4s ease-in-out; /* جعل أي تغيير في الهيدر سلس */
+}
+
+/* تغيير لون خلفية الهيدر عند تمرير المؤشر */
+header.sticky-top:hover {
+    background-color: #93bdd7 !important; /* تغيير لون خلفية الهيدر عند التفاعل */
+}
+
+/* تنسيق روابط القائمة */
+.navbar-nav .nav-link {
+    color: #0b0b0b !important;       /* تحديد لون النص الافتراضي */
+    font-weight: 600 !important;     /* جعل الخط متوسط السماكة */
+    transition: all 0.3s ease-in-out !important; /* إضافة حركة سلسة عند التفاعل */
+}
+
+/* تغيير لون الروابط عند التفاعل */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+    color: #d4af37 !important;    /* تحويل اللون إلى الذهبي عند التفاعل */
+}
+
+/* جعل الروابط ذات لون يتناسب عند تحول الهيدر للون الداكن */
+header.sticky-top:hover .nav-link {
+    color: #060505 !important; /* تغيير اللون عند تغيير خلفية الهيدر */
+}
+
+/* الإبقاء على اللون الذهبي عند التفاعل */
+header.sticky-top:hover .nav-link:hover {
+    color: #d4af37 !important; /* الحفاظ على اللون الذهبي عند التحويم */
+}
+
+
+/* =========================================================
+   4. توحيد أزرار الهيدر (Header Buttons)
+   ========================================================= */
+
+/* زر الاشتراك الأساسي */
+header .btn-primary {
+    background-color: #0d15ae !important; /* تعيين لون الخلفية الذهبي */
+    border: none !important; /* إزالة حدود الزر */
+    border-radius: 8px !important; /* جعل الزوايا دائرية */
+    padding: 8px 20px !important; /* تحديد المسافة الداخلية للزر */
+    font-weight: 600 !important; /* جعل الخط متوسط السماكة */
+    color: #fff !important; /* تحديد لون النص أبيض */
+    transition: 0.3s; /* إضافة تأثير انتقال ناعم */
+}
+
+/* تأثير التحويم على الزر الأساسي */
+header .btn-primary:hover {
+    background-color: #b8962e !important; /* تغيير اللون عند التحويم */
+    transform: translateY(-2px); /* تحريك الزر للأعلى قليلاً */
+}
+
+/* زر تسجيل الدخول */
+header .btn-outline-primary {
+    border-color: #d4af37 !important; /* تحديد لون الإطار */
+    color: #4937d4 !important; /* تحديد لون النص */
+    border-radius: 8px !important; /* جعل الزوايا دائرية */
+    background-color: transparent !important; /* جعل الخلفية شفافة */
+    transition: 0.3s; /* إضافة تأثير انتقال */
+}
+
+/* تأثير التحويم لزر تسجيل الدخول */
+header .btn-outline-primary:hover {
+    background-color: #d4af37 !important; /* ملء الزر باللون الذهبي */
+    color: white !important; /* تغيير لون النص إلى الأبيض */
+}
+
+/* ألوان الهوية البصرية العامة */
+.border-gold { border-color: #d4af37 !important; } /* تحديد لون حدود ذهبي */
+.text-gold   { color: #d4af37 !important; } /* تحديد لون نص ذهبي */
+.bg-gold-light { background-color: rgba(212, 175, 55, 0.1) !important; } /* خلفية ذهبية شفافة */
+
+
+/* =========================================================
+   7. أيقونة الواتساب العائمة (WhatsApp Floating Button)
+   ========================================================= */
+
+/* زر واتساب ثابت مع حركة نبض */
+.float-whatsapp {
+    position: fixed; /* تثبيت الزر في مكانه أثناء التمرير */
+    width: 60px; /* عرض الزر */
+    height: 60px; /* ارتفاع الزر */
+    bottom: 40px; /* المسافة من أسفل الشاشة */
+    left: 40px; /* المسافة من يسار الشاشة */
+    background-color: #25d366; /* لون واتساب الرسمي */
+    color: #FFF; /* لون الأيقونة أبيض */
+    border-radius: 50px; /* جعل الزر دائري */
+    display: flex; /* استخدام Flex لتوسيط الأيقونة */
+    justify-content: center; /* توسيط أفقي */
+    align-items: center; /* توسيط عمودي */
+    z-index: 100; /* جعله فوق العناصر الأخرى */
+    text-decoration: none; /* إزالة خط الرابط */
+    font-size: 30px; /* حجم الأيقونة */
+    animation: pulse-animation 2s infinite; /* تشغيل حركة النبض */
+}
+
+/* أنيميشن النبض */
+@keyframes pulse-animation {
+    0%   { box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.7); } /* بداية النبض */
+    70%  { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); } /* توسع الظل */
+    100% { box-shadow: 0 0 0 0px rgba(37, 211, 102, 0); } /* اختفاء الظل */
+}
+
+/* تأثير التفاعل مع زر الواتساب */
+.float-whatsapp:hover {
+    transform: scale(1.1); /* تكبير الزر عند التحويم */
+    background-color: #128c7e; /* تغيير اللون */
+    color: white; /* تثبيت لون الأيقونة */
+    animation: none; /* إيقاف حركة النبض */
+}
+
+
+/* =========================================================
+   8. تنسيق السلايدر (Carousel)
+   ========================================================= */
+
+/* ضبط ارتفاع صور السلايدر */
+.carousel-item img {
+    height: 500px; /* تحديد ارتفاع الصور */
+    object-fit: cover; /* قص الصورة مع الحفاظ على التناسب */
+}
+/* تنسيق القوائم المنسدلة في الهيدر */
+.navbar-nav .dropdown-menu {
+    border: none;
+    border-top: 3px solid #d4af37; /* الخط الذهبي المميز لموقعك */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 0 0 12px 12px;
+    text-align: right;
+    padding: 10px;
+    animation: dropdownFade 0.3s ease;
+}
+
+.dropdown-item {
+    font-weight: 500;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+    color: #444;
+}
+
+.dropdown-item i {
+    color: #d4af37; /* لون الأيقونات ذهبي */
+    width: 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #fcf8e3; /* خلفية ذهبية فاتحة */
+    color: #d4af37;
+    transform: translateX(-5px); /* إزاحة خفيفة لليمين */
+}
+
+@keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* فتح القائمة عند تمرير الماوس في الشاشات الكبيرة */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+

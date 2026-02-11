@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة اعادة الاعمار _ غزة _ الصيانة والترميم</title>
+
+    <!-- تحميل مكتبة Bootstrap بنسخة RTL لدعم الكتابة من اليمين لليسار -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- تحميل أيقونات Font Awesome لاستخدام الأيقونات في الموقع -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- تحميل ملف CSS الخاص بالموقع -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/maintenance.css">
+</head>
+<body>
+
+    <!-- شاشة البداية / الشعار عند تحميل الموقع -->
+    <div id="splash-screen">
+        <img src="images/logo.png" alt="Logo" id="splash-logo">
+    </div>
+
+    <!-- رأس الموقع (الهيدر) مع شريط تنقل ثابت أعلى الصفحة -->
+    <header class="sticky-top bg-light shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            
+            <!-- شعار الموقع -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="50">
+            </a>
+            
+            <!-- زر القائمة للهواتف والأجهزة الصغيرة -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- روابط التنقل الرئيسية -->
+           <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">الرئيسية</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="projects.html" id="projectsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                المشاريع
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="projectsDrop">
+                <li><a class="dropdown-item" href="projects.html#ongoing-projects-area"><i class="fas fa-sync-alt ms-2"></i> مشاريع قيد التنفيذ</a></li>
+                <li><a class="dropdown-item" href="projects.html#finished-projects-area"><i class="fas fa-check-circle ms-2"></i> المشاريع المنجزة</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="projects.html"><i class="fas fa-list ms-2"></i> عرض كافة المشاريع</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="maintenance.html" id="maintenanceDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                الصيانة والترميم
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="maintenanceDrop">
+                <li><a class="dropdown-item" href="maintenance.html#emergency-repairs"><i class="fas fa-tools ms-2"></i> طلب ترميم عاجل</a></li>
+                <li><a class="dropdown-item" href="maintenance.html#maintenance-services"><i class="fas fa-hammer ms-2"></i> خدمات الصيانة</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="talents.html" id="talentsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                دليل الكفاءات
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="talentsDrop">
+                <li><a class="dropdown-item" href="talents.html#find-talent"><i class="fas fa-search ms-2"></i> البحث عن خبير</a></li>
+                <li><a class="dropdown-item" href="talents.html#join-us"><i class="fas fa-user-plus ms-2"></i> انضم كخبير</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="adopt.html">تبنَّ إصلاحاً</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">تواصل معنا</a>
+        </li>
+    </ul>
+</div>
+
+            <!-- أزرار تسجيل الدخول والاشتراك على يمين الهيدر -->
+            <div class="d-flex">
+                 <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</button>
+                <button class="btn btn-warning fw-bold ms-2" data-bs-toggle="modal" data-bs-target="#registerModal">اشتراك</button>
+            </div>
+        </nav>
+    </header>
+
+  <!-- =============================== -->
+<!-- قسم السلايدر الرئيسي (Hero Slider) -->
+<!-- =============================== -->
+<section 
+    id="hero-slider" 
+    class="carousel slide carousel-fade" 
+    data-bs-ride="carousel">
+    <!-- 
+        id="hero-slider" : معرف فريد للتحكم بالسلايدر
+        carousel        : تفعيل مكوّن السلايدر من Bootstrap
+        slide           : تمكين الحركة الانتقالية بين الشرائح
+        carousel-fade   : انتقال بتأثير التلاشي بدل الانزلاق
+        data-bs-ride    : تشغيل السلايدر تلقائيًا
+    -->
+
+    <!-- =============================== -->
+    <!-- مؤشرات التنقل (النقاط السفلية) -->
+    <!-- =============================== -->
+    <div class="carousel-indicators custom-indicators">
+        <!-- 
+            carousel-indicators : حاوية مؤشرات السلايدر
+            custom-indicators   : تنسيق مخصص عبر CSS
+        -->
+
+        <!-- زر المؤشر الأول (الشريحة الأولى) -->
+        <button 
+            type="button" 
+            data-bs-target="#hero-slider" 
+            data-bs-slide-to="0" 
+            class="active">
+        </button>
+
+        <!-- زر المؤشر الثاني -->
+        <button 
+            type="button" 
+            data-bs-target="#hero-slider" 
+            data-bs-slide-to="1">
+        </button>
+
+        <!-- زر المؤشر الثالث -->
+        <button 
+            type="button" 
+            data-bs-target="#hero-slider" 
+            data-bs-slide-to="2">
+        </button>
+    </div>
+
+    <!-- =============================== -->
+    <!-- محتوى السلايدر (الشرائح) -->
+    <!-- =============================== -->
+    <div class="carousel-inner">
+        <!-- carousel-inner : الحاوية الأساسية لكل الشرائح -->
+
+        <!-- =============================== -->
+        <!-- الشريحة الأولى -->
+        <!-- =============================== -->
+        <div class="carousel-item active">
+            <!-- carousel-item : تمثل شريحة واحدة -->
+            <!-- active        : الشريحة المعروضة افتراضيًا -->
+
+            <!-- صورة الخلفية مع طبقة تغطية -->
+            <div 
+                class="overlay-image" 
+                style="background-image: url('images/image2.webp');">
+                <!-- 
+                    overlay-image : عنصر مخصص لعرض الصورة كخلفية
+                    background-image : تحديد صورة الخلفية
+                -->
+            </div>
+
+            <!-- نصوص توضيحية فوق الصورة -->
+            <div class="carousel-caption custom-caption animate__animated animate__fadeInUp">
+                <!-- 
+                    carousel-caption : موضع النص فوق الصورة
+                    custom-caption   : تنسيق مخصص
+                    animate__*       : تأثيرات حركة عند الظهور
+                -->
+
+                <!-- صندوق النص -->
+                <div class="caption-box">
+                    <h2 class="fw-bold">رؤية عمرانية جديدة</h2>
+                    <!-- fw-bold : جعل العنوان عريضًا -->
+
+                    <p>حيث نقوم بوضع تصورا متطور حول المنشئات السكنية والمرافق العامة.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- =============================== -->
+        <!-- الشريحة الثانية -->
+        <!-- =============================== -->
+        <div class="carousel-item">
+            <div 
+                class="overlay-image" 
+                style="background-image: url('images/image1.jpg');">
+            </div>
+
+            <div class="carousel-caption custom-caption animate__animated animate__fadeInUp">
+                <div class="caption-box highlight-border">
+                    <!-- highlight-border : إطار مميز للصندوق -->
+
+                    <h2 class="fw-bold">بناء الصمود والتنمية</h2>
+                    <p> التركيز على الأدوات والمعدات الحديثة المستخدمة.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- =============================== -->
+        <!-- الشريحة الثالثة -->
+        <!-- =============================== -->
+        <div class="carousel-item">
+            <div 
+                class="overlay-image" 
+                style="background-image: url('images/images5.jpg');">
+            </div>
+
+            <div class="carousel-caption custom-caption animate__animated animate__fadeInUp">
+                <div class="caption-box">
+                    <h2 class="fw-bold">سواعد تبني المستقبل</h2>
+                    <p>دور الكوادر البشرية في إنجاح مشروع الإعمار.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- أزرار التنقل (السابق / التالي) -->
+    <!-- =============================== -->
+
+    <!-- زر الرجوع للشريحة السابقة -->
+    <button 
+        class="carousel-control-prev" 
+        type="button" 
+        data-bs-target="#hero-slider" 
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <!-- أيقونة السهم الأيسر -->
+    </button>
+
+    <!-- زر الانتقال للشريحة التالية -->
+    <button 
+        class="carousel-control-next" 
+        type="button" 
+        data-bs-target="#hero-slider" 
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <!-- أيقونة السهم الأيمن -->
+    </button>
+
+</section>
+<!-- ============================ -->
+<!-- قسم أسعار مواد البناء -->
+<!-- ============================ -->
+<section id="prices-section" class="py-5 bg-white">
+    <div class="container">
+
+        <!-- عنوان القسم مع أيقونة المطرقة -->
+        <div class="text-center mb-5 animate__animated animate__fadeIn">
+            <h2 class="fw-bold">
+                <i class="fas fa-hammer text-warning me-2"></i> <!-- أيقونة -->
+                دليل مواد البناء والأسعار
+            </h2>
+            <p class="text-muted">
+                نحدث الأسعار يومياً لمساعدتك في تخطيط مشروعك بدقة
+            </p>
+        </div>
+
+        <!-- جدول الأسعار مع تأثير الظل والحواف المستديرة -->
+        <div class="table-responsive shadow-lg rounded-4 overflow-hidden animate__animated animate__fadeInUp">
+            <table class="table table-hover align-middle mb-0">
+                <!-- رأس الجدول -->
+                <thead class="table-dark">
+                    <tr>
+                        <th class="py-3">صورة المادة</th> <!-- صورة صغيرة للمادة -->
+                        <th class="py-3">المادة الإنشائية</th> <!-- اسم المادة -->
+                        <th class="py-3">السعر (شيكل)</th> <!-- السعر بالشيكل -->
+                        <th class="py-3">مستوى الطلب</th> <!-- مرتفع/متوسط/منخفض -->
+                        <th class="py-3">التوفر</th> <!-- متوفر/كمية محدودة/طلب مسبق -->
+                        <th class="py-3">إجراء</th> <!-- زر الطلب -->
+                    </tr>
+                </thead>
+
+                <!-- جسم الجدول سيتم ملؤه ديناميكياً بواسطة JavaScript -->
+                <tbody id="materials-table-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ============================ -->
+<!-- نافذة الطلب (Modal) -->
+<!-- ============================ -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            
+            <!-- رأس المودال -->
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title fw-bold text-dark">تقديم طلب توريد مادة</h5>
+                <!-- زر الإغلاق -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- نموذج الطلب -->
+            <form id="orderForm">
+                <div class="modal-body p-4">
+                    
+                    <!-- عرض صورة المادة -->
+                    <div class="text-center mb-4 bg-light p-2 rounded-3 border">
+                        <img id="orderItemImage" src="" alt="صورة المادة" 
+                             class="img-fluid rounded shadow-sm" 
+                             style="max-height: 180px; width: 100%; object-fit: cover;">
+                    </div>
+
+                    <!-- اسم المادة (يملأ تلقائياً من الجدول) -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">اسم المادة</label>
+                        <input type="text" id="orderItemName" class="form-control bg-light fw-bold" readonly>
+                    </div>
+
+                    <!-- حقل اسم العميل -->
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">الاسم الكامل</label>
+                        <input type="text" id="customerName" class="form-control" placeholder="أدخل اسمك الثلاثي" required>
+                    </div>
+
+                    <!-- حقل الكمية والسعر الإجمالي -->
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">الكمية المطلوبة</label>
+                            <input type="number" id="orderQty" class="form-control" value="1" min="1" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">السعر الإجمالي</label>
+                            <div class="input-group">
+                                <!-- حقل السعر الإجمالي يتم حسابه ديناميكياً -->
+                                <input type="text" id="totalPrice" class="form-control fw-bold text-success" readonly>
+                                <span class="input-group-text bg-white border-end-0">₪</span> <!-- وحدة العملة -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أزرار المودال -->
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="submit" class="btn btn-dark px-4 fw-bold">إرسال الطلب الآن</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <!-- ============================ -->
+<!-- قسم الكفاءات المهنية (المهندسين والحرفيين) -->
+<!-- ============================ -->
+<section id="workers-section" class="py-5 bg-light">
+    <div class="container">
+
+        <!-- عنوان القسم مع أيقونة -->
+        <div class="text-center mb-5 animate__animated animate__fadeIn">
+            <h2 class="fw-bold">
+                <i class="fas fa-user-tie text-warning me-2"></i> <!-- أيقونة الموظف -->
+                دليل الكفاءات المهنية
+            </h2>
+            <p class="text-muted">
+                نخبة من المهندسين والحرفيين المؤهلين لإعادة إعمار غزة
+            </p>
+        </div>
+
+        <!-- صف المهنيين سيتم ملؤه ديناميكياً بواسطة JavaScript -->
+        <div class="row g-4" id="workers-container">
+            </div>
+    </div>
+</section>
+
+<!-- ============================ -->
+<!-- نافذة عرض تفاصيل المهني (Modal) -->
+<!-- ============================ -->
+<div class="modal fade" id="workerDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            
+            <!-- رأس المودال -->
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="modalWorkerName">تفاصيل المهني</h5> <!-- اسم المهني -->
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button> <!-- زر الإغلاق -->
+            </div>
+
+            <!-- محتوى المودال -->
+            <div class="modal-body p-4 text-center">
+
+                <!-- صورة المهني -->
+                <img id="modalWorkerImg" src="" class="rounded-circle mb-3 shadow" 
+                     style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #ffc107;">
+
+                <!-- وظيفة المهني -->
+                <h4 id="modalWorkerJob" class="text-warning fw-bold"></h4>
+
+                <hr>
+
+                <!-- نبذة تعريفية عن المهني -->
+                <p id="modalWorkerBio" class="text-secondary lh-lg"></p>
+
+                <!-- تقييم المهني -->
+                <div class="bg-light p-3 rounded">
+                    <h6 class="fw-bold mb-1">متوسط التقييم العام:</h6>
+                    <div id="modalWorkerStars" class="text-warning"></div> <!-- نجوم التقييم -->
+                </div>
+            </div>
+
+            <!-- أزرار المودال -->
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-warning w-100 fw-bold" data-bs-dismiss="modal">
+                    إغلاق المعاينة
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+       <!-- ================================ -->
+<!-- قسم التقييمات وآراء العملاء -->
+<!-- ================================ -->
+<section id="testimonials-section" class="py-5 bg-dark text-white overflow-hidden">
+    <div class="container">
+
+        <!-- عنوان القسم -->
+        <div class="text-center mb-5 animate__animated animate__fadeIn">
+            <h6 class="text-warning fw-bold text-uppercase">
+                ماذا يقولون عنا؟ <!-- العنوان الصغير -->
+            </h6>
+            <h2 class="display-5 fw-bold">
+                ثقة عملائنا هي سر نجاحنا <!-- العنوان الرئيسي -->
+            </h2>
+        </div>
+
+        <!-- سلايدر التقييمات باستخدام Carousel من Bootstrap -->
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- الحاوية التي سيتم إدراج آراء العملاء فيها ديناميكيًا -->
+            <div class="carousel-inner" id="testimonials-container">
+                <!-- هنا ستظهر كل بطاقة تقييم -->
+            </div>
+            
+            <!-- أزرار التحكم بالسلايدر (السابق/التالي) -->
+            <div class="d-flex justify-content-center mt-4">
+                <!-- زر السابق -->
+                <button class="btn btn-outline-warning btn-sm me-2 rounded-circle" 
+                        type="button" 
+                        data-bs-target="#testimonialCarousel" 
+                        data-bs-slide="prev">
+                    <i class="fas fa-chevron-right"></i> <!-- أيقونة سهم -->
+                </button>
+
+                <!-- زر التالي -->
+                <button class="btn btn-outline-warning btn-sm rounded-circle" 
+                        type="button" 
+                        data-bs-target="#testimonialCarousel" 
+                        data-bs-slide="next">
+                    <i class="fas fa-chevron-left"></i> <!-- أيقونة سهم -->
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+       <section class="py-5 bg-warning text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-4">هل لديك مشروع خاص أو استفسار؟</h2>
+        <button class="btn btn-dark btn-lg px-5 py-3 rounded-pill fw-bold shadow animate__animated animate__pulse animate__infinite" 
+                data-bs-toggle="modal" data-bs-target="#serviceModal">
+            نحن في الخدمة <i class="fas fa-headset ms-2"></i>
+        </button>
+    </div>
+</section>
+<!--نافذة منبثقة لطلب خدمة-->
+<div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title">طلب خدمة جديدة</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="serviceForm">
+                <div class="modal-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">الاسم</label>
+                        <input type="text" class="form-control" id="senderName" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">البريد الإلكتروني</label>
+                        <input type="email" class="form-control" id="senderEmail" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">وصف الخدمة المطلوبة</label>
+                        <textarea class="form-control" id="serviceDesc" rows="4" placeholder="اشرح لنا تفاصيل الخدمة التي تحتاجها..." required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">إغلاق</button>
+                    <button type="submit" class="btn btn-warning fw-bold px-4">إرسال للمراجعة</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+   <!-- الفوتر / قسم الاتصال -->
+    <footer id="contact" class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>جميع الحقوق محفوظة &copy; 2024 - جامعة الأقصى [cite: 89]</p>
+            <p>تواصل معنا: info@example.com | 0590000000</p>
+        </div>
+    </footer>
+
+    <!-- أيقونة الواتساب العائمة -->
+    <a href="https://wa.me/970590000000?text=مرحباً،%20أود%20الاستفسار%20عن%20مشاريع%20إعادة%20الإعمار" class="float-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <!-- Modal لتسجيل الدخول -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <!-- صندوق الحوار المركزي للـ Modal -->
+    <div class="modal-dialog modal-dialog-centered">
+        <!-- محتوى الـ Modal مع ظل وحواف مستديرة -->
+        <div class="modal-content border-0 shadow-lg rounded-4">
+            <!-- رأس الـ Modal بدون حدود لتقليل المسافة -->
+            <div class="modal-header border-0 pb-0">
+                <!-- زر الإغلاق -->
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- جسم الـ Modal مع حشو داخلي ومحاذاة النص لليمين -->
+            <div class="modal-body p-4 pt-0 text-end">
+                <!-- أيقونة وعنوان مركزي -->
+                <div class="text-center mb-4">
+                    <i class="fas fa-user-circle fa-4x text-warning mb-3"></i> <!-- أيقونة المستخدم -->
+                    <h3 class="fw-bold">تسجيل الدخول</h3>
+                </div>
+                <!-- نموذج تسجيل الدخول -->
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">البريد الإلكتروني</label>
+                        <input type="email" class="form-control bg-light border-0 py-2" placeholder="name@example.com" required>
+                        <!-- حقل البريد الإلكتروني مع تصميم Bootstrap -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">كلمة المرور</label>
+                        <input type="password" class="form-control bg-light border-0 py-2" placeholder="********" required>
+                        <!-- حقل كلمة المرور -->
+                    </div>
+                    <!-- زر إرسال النموذج -->
+                    <button type="submit" class="btn btn-warning w-100 fw-bold py-2 shadow-sm">دخول</button>
+                    <!-- رابط للتسجيل إذا لم يكن لدى المستخدم حساب -->
+                    <p class="text-center mt-3 small">
+                        ليس لديك حساب؟ 
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" class="text-warning fw-bold text-decoration-none">
+                            أنشئ حساباً الآن
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal لإنشاء حساب جديد -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <!-- صندوق الحوار المركزي للـ Modal -->
+    <div class="modal-dialog modal-dialog-centered">
+        <!-- محتوى الـ Modal مع ظل وحواف مستديرة -->
+        <div class="modal-content border-0 shadow-lg rounded-4">
+            <!-- رأس الـ Modal بدون حدود -->
+            <div class="modal-header border-0 pb-0">
+                <!-- زر الإغلاق -->
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- جسم الـ Modal -->
+            <div class="modal-body p-4 pt-0 text-end">
+                <!-- أيقونة وعنوان مركزي -->
+                <div class="text-center mb-4">
+                    <i class="fas fa-user-plus fa-4x text-warning mb-3"></i> <!-- أيقونة إنشاء حساب -->
+                    <h3 class="fw-bold">إنشاء حساب جديد</h3>
+                </div>
+                <!-- نموذج التسجيل -->
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">الاسم الكامل</label>
+                        <input type="text" class="form-control bg-light border-0 py-2" placeholder="أدخل اسمك" required>
+                        <!-- حقل الاسم الكامل -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">البريد الإلكتروني</label>
+                        <input type="email" class="form-control bg-light border-0 py-2" placeholder="name@example.com" required>
+                        <!-- حقل البريد الإلكتروني -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">كلمة المرور</label>
+                        <input type="password" class="form-control bg-light border-0 py-2" placeholder="********" required>
+                        <!-- حقل كلمة المرور -->
+                    </div>
+                    <!-- زر إرسال النموذج للتسجيل -->
+                    <button type="submit" class="btn btn-warning w-100 fw-bold py-2 shadow-sm">اشترك الآن</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/maintenance.js"></script>
+</body>
+</html>

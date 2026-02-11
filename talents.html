@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة اعادة الاعمار _  غزة _ دليل الكفاءات</title>
+
+    <!-- تحميل مكتبة Bootstrap بنسخة RTL لدعم الكتابة من اليمين لليسار -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- تحميل أيقونات Font Awesome لاستخدام الأيقونات في الموقع -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- تحميل ملف CSS الخاص بالموقع -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/talents.css">
+</head>
+<body>
+
+    <!-- شاشة البداية / الشعار عند تحميل الموقع -->
+    <div id="splash-screen">
+        <img src="images/logo.png" alt="Logo" id="splash-logo">
+    </div>
+
+    <!-- رأس الموقع (الهيدر) مع شريط تنقل ثابت أعلى الصفحة -->
+    <header class="sticky-top bg-light shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            
+            <!-- شعار الموقع -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="50">
+            </a>
+            
+            <!-- زر القائمة للهواتف والأجهزة الصغيرة -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- روابط التنقل الرئيسية -->
+           <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">الرئيسية</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="projects.html" id="projectsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                المشاريع
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="projectsDrop">
+                <li><a class="dropdown-item" href="projects.html#ongoing-projects-area"><i class="fas fa-sync-alt ms-2"></i> مشاريع قيد التنفيذ</a></li>
+                <li><a class="dropdown-item" href="projects.html#finished-projects-area"><i class="fas fa-check-circle ms-2"></i> المشاريع المنجزة</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="projects.html"><i class="fas fa-list ms-2"></i> عرض كافة المشاريع</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="maintenance.html" id="maintenanceDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                الصيانة والترميم
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="maintenanceDrop">
+                <li><a class="dropdown-item" href="maintenance.html#emergency-repairs"><i class="fas fa-tools ms-2"></i> طلب ترميم عاجل</a></li>
+                <li><a class="dropdown-item" href="maintenance.html#maintenance-services"><i class="fas fa-hammer ms-2"></i> خدمات الصيانة</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="talents.html" id="talentsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                دليل الكفاءات
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="talentsDrop">
+                <li><a class="dropdown-item" href="talents.html#find-talent"><i class="fas fa-search ms-2"></i> البحث عن خبير</a></li>
+                <li><a class="dropdown-item" href="talents.html#join-us"><i class="fas fa-user-plus ms-2"></i> انضم كخبير</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="adopt.html">تبنَّ إصلاحاً</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">تواصل معنا</a>
+        </li>
+    </ul>
+</div>
+
+            <!-- أزرار تسجيل الدخول والاشتراك على يمين الهيدر -->
+            <div class="d-flex">
+                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</button>
+                <button class="btn btn-warning fw-bold ms-2" data-bs-toggle="modal" data-bs-target="#registerModal">اشتراك</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="professional-hero" class="carousel slide carousel-fade" data-bs-ride="carousel"> <!-- قسم السلايدر الرئيسي مع تأثير التلاشي -->
+    
+    <div class="carousel-indicators"> <!-- مؤشرات التنقل (النقاط أسفل السلايدر) -->
+        <button type="button" data-bs-target="#professional-hero" data-bs-slide-to="0" class="active"></button> <!-- مؤشر الشريحة الأولى -->
+        <button type="button" data-bs-target="#professional-hero" data-bs-slide-to="1"></button> <!-- مؤشر الشريحة الثانية -->
+        <button type="button" data-bs-target="#professional-hero" data-bs-slide-to="2"></button> <!-- مؤشر الشريحة الثالثة -->
+    </div>
+
+    <div class="carousel-inner"> <!-- حاوية الشرائح -->
+
+        <div class="carousel-item active" style="height: 650px;"> <!-- الشريحة الأولى وارتفاعها 650px -->
+            <div class="slider-overlay"></div> <!-- طبقة تغطية شفافة فوق الصورة -->
+            <img src="images/slider1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="إعمار غزة"> <!-- صورة الشريحة الأولى -->
+            
+            <div class="carousel-caption text-end"> <!-- النص الظاهر فوق الصورة ومحاذاته لليمين -->
+                <h1 class="display-3 fw-bold text-warning mb-3 animate__animated animate__fadeInRight">دليلُ الكفاءاتِ الهندسية</h1> <!-- عنوان رئيسي مع تأثير حركي -->
+                <p class="fs-4 text-white mb-4 animate__animated animate__fadeInRight animate__delay-1s">المنصة الأولى لربط أصحاب المنازل بأمهر المهندسين الإنشائيين في قطاع غزة.</p> <!-- وصف الشريحة -->
+                
+                <div class="animate__animated animate__zoomIn animate__delay-2s"> <!-- حاوية زر مع تأثير تكبير -->
+                    <button class="btn btn-warning btn-lg px-5 rounded-pill fw-bold shadow">ابدأ الآن</button> <!-- زر دعوة لاتخاذ إجراء -->
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item" style="height: 650px;"> <!-- الشريحة الثانية -->
+            <div class="slider-overlay"></div> <!-- طبقة تغطية -->
+            <img src="images/slider2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="حرفيين غزة"> <!-- صورة الشريحة الثانية -->
+            
+            <div class="carousel-caption text-end"> <!-- نص الشريحة الثانية -->
+                <h1 class="display-3 fw-bold text-warning mb-3 animate__animated animate__fadeInRight">سواعدٌ تبني الوطن</h1> <!-- عنوان الشريحة -->
+                <p class="fs-4 text-white mb-4 animate__animated animate__fadeInRight animate__delay-1s">نوفر لك وصولاً مباشراً للحرفيين المهرة من سباكين وكهربائيين وفنيي ترميم.</p> <!-- وصف الشريحة -->
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#professional-hero" data-bs-slide="prev"> <!-- زر الانتقال للشريحة السابقة -->
+        <span class="carousel-control-prev-icon"></span> <!-- أيقونة السهم السابق -->
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#professional-hero" data-bs-slide="next"> <!-- زر الانتقال للشريحة التالية -->
+        <span class="carousel-control-next-icon"></span> <!-- أيقونة السهم التالي -->
+    </button>
+
+</section>
+
+<section id="talents-list" class="py-5 bg-white"> <!-- قسم قائمة الكفاءات -->
+    <div class="container"> <!-- حاوية Bootstrap -->
+        <h2 class="text-end fw-bold mb-5 border-bottom pb-3">قائمة المهندسين والحرفيين المهرة</h2> <!-- عنوان القسم -->
+        
+        <div id="workers-stack" class="row g-4"> <!-- حاوية سيتم تعبئتها ديناميكياً عبر JavaScript -->
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true"> <!-- نافذة منبثقة لعرض تفاصيل المهني -->
+    <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- صندوق حوار كبير ومتمركز -->
+        <div class="modal-content border-0 rounded-4"> <!-- محتوى النافذة بدون حدود وبزوايا دائرية -->
+            
+            <div class="modal-header border-0 bg-light"> <!-- رأس النافذة -->
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal"></button> <!-- زر إغلاق -->
+            </div>
+
+            <div class="modal-body p-4 text-end"> <!-- جسم النافذة -->
+                <div class="row align-items-center"> <!-- صف لتقسيم المحتوى -->
+                    
+                    <div class="col-md-4 text-center"> <!-- عمود الصورة -->
+                        <img id="m-img" src="" class="worker-img-lg mb-3 shadow"> <!-- صورة المهني -->
+                        <div id="m-demand" class="badge bg-danger fs-6 p-2 rounded-pill"></div> <!-- حالة الطلب -->
+                    </div>
+
+                    <div class="col-md-8"> <!-- عمود التفاصيل -->
+                        <h3 id="m-name" class="fw-bold text-dark"></h3> <!-- اسم المهني -->
+                        <p id="m-job" class="text-warning fw-bold fs-5"></p> <!-- تخصصه -->
+                        <hr> <!-- خط فاصل -->
+                        
+                        <h6 class="fw-bold"><i class="fas fa-info-circle me-1"></i> حول المهني:</h6> <!-- عنوان فرعي -->
+                        <p id="m-bio" class="text-muted lh-lg"></p> <!-- نبذة تعريفية -->
+                        
+                        <div class="bg-light p-3 rounded-3 mt-3"> <!-- صندوق رأي العميل -->
+                            <h6 class="fw-bold text-dark"><i class="fas fa-comment-dots me-1"></i> رأي آخر عميل:</h6>
+                            <p id="m-testimonial" class="fst-italic text-secondary mb-0"></p> <!-- نص التوصية -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer border-0"> <!-- تذييل النافذة -->
+                <button class="btn btn-dark w-100 py-3 fw-bold rounded-3" data-bs-dismiss="modal">إغلاق التفاصيل</button> <!-- زر إغلاق -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<section id="employment-section" class="py-5 bg-light"> <!-- قسم التوظيف -->
+    <div class="container"> <!-- حاوية -->
+        <div class="row justify-content-center"> <!-- صف بمحاذاة مركزية -->
+            <div class="col-lg-10"> <!-- عمود بعرض متوسط -->
+                
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden animate__animated animate__fadeInUp"> <!-- بطاقة رئيسية -->
+                    <div class="row g-0"> <!-- تقسيم داخلي -->
+                        
+                        <div class="col-md-4 bg-dark text-white p-5 d-flex flex-column justify-content-center text-end"> <!-- عمود تعريفي -->
+                            <h2 class="fw-bold text-warning mb-4">انضم إلى سواعدنا</h2> <!-- عنوان -->
+                            <p class="lh-lg opacity-75">نحن نبحث عن الكفاءات الوطنية للمساهمة في أكبر مشروع وطني لإعادة إعمار قطاع غزة.</p> <!-- وصف -->
+                            
+                            <ul class="list-unstyled mt-4"> <!-- قائمة مزايا -->
+                                <li class="mb-2"><i class="fas fa-check-circle text-warning ms-2"></i> أولوية للمشتركين</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-warning ms-2"></i> عقود مهنية معتمدة</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-warning ms-2"></i> دعم فني واستشاري</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-md-8 bg-white p-5"> <!-- عمود نموذج التقديم -->
+                            
+                            <div class="text-end mb-4"> <!-- عنوان النموذج -->
+                                <h3 class="fw-bold">تقديم طلب توظيف</h3>
+                                <p class="text-muted small">ملاحظة: هذا النموذج متاح فقط للأعضاء المسجلين في الموقع.</p>
+                            </div>
+                            
+                            <form id="proJobForm"> <!-- نموذج التوظيف -->
+                                
+                                <div id="validationMsg"></div> <!-- مكان عرض رسائل التحقق -->
+                                
+                                <div class="row g-3 text-end"> <!-- صف الحقول -->
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">الاسم الكامل</label> <!-- تسمية الحقل -->
+                                        <input type="text" id="jobFullName" class="form-control py-2" placeholder="أدخل اسمك الرباعي" required> <!-- حقل الاسم -->
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">البريد الإلكتروني (المسجل به)</label>
+                                        <input type="email" id="jobEmail" class="form-control py-2" placeholder="name@example.com" required> <!-- حقل البريد -->
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <label class="form-label fw-bold">التخصص المهني</label>
+                                        <select id="jobCategory" class="form-select py-2" required> <!-- قائمة منسدلة -->
+                                            <option value="" selected disabled>اختر تخصصك...</option>
+                                            <option>مهندس مدني</option>
+                                            <option>مهندس معماري</option>
+                                            <option>فني كهرباء/طاقة</option>
+                                            <option>حرفي (نجارة/سباكة)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <label class="form-label fw-bold">رابط السيرة الذاتية (أو ملخص الخبرة)</label>
+                                        <textarea id="jobExperience" class="form-control" rows="4" placeholder="تحدث عن خبراتك السابقة بإيجاز..."></textarea> <!-- حقل نصي متعدد الأسطر -->
+                                    </div>
+
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-warning w-100 py-3 fw-bold rounded-pill shadow-sm">إرسال الطلب للمراجعة</button> <!-- زر إرسال -->
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- الفوتر / قسم الاتصال -->
+    <footer id="contact" class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>جميع الحقوق محفوظة &copy; 2024 - جامعة الأقصى [cite: 89]</p>
+            <p>تواصل معنا: info@example.com | 0590000000</p>
+        </div>
+    </footer>
+
+    <!-- أيقونة الواتساب العائمة -->
+    <a href="https://wa.me/970590000000?text=مرحباً،%20أود%20الاستفسار%20عن%20مشاريع%20إعادة%20الإعمار" class="float-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Modal لتسجيل الدخول -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <!-- صندوق الحوار المركزي للـ Modal -->
+    <div class="modal-dialog modal-dialog-centered">
+        <!-- محتوى الـ Modal مع ظل وحواف مستديرة -->
+        <div class="modal-content border-0 shadow-lg rounded-4">
+            <!-- رأس الـ Modal بدون حدود لتقليل المسافة -->
+            <div class="modal-header border-0 pb-0">
+                <!-- زر الإغلاق -->
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- جسم الـ Modal مع حشو داخلي ومحاذاة النص لليمين -->
+            <div class="modal-body p-4 pt-0 text-end">
+                <!-- أيقونة وعنوان مركزي -->
+                <div class="text-center mb-4">
+                    <i class="fas fa-user-circle fa-4x text-warning mb-3"></i> <!-- أيقونة المستخدم -->
+                    <h3 class="fw-bold">تسجيل الدخول</h3>
+                </div>
+                <!-- نموذج تسجيل الدخول -->
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">البريد الإلكتروني</label>
+                        <input type="email" class="form-control bg-light border-0 py-2" placeholder="name@example.com" required>
+                        <!-- حقل البريد الإلكتروني مع تصميم Bootstrap -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">كلمة المرور</label>
+                        <input type="password" class="form-control bg-light border-0 py-2" placeholder="********" required>
+                        <!-- حقل كلمة المرور -->
+                    </div>
+                    <!-- زر إرسال النموذج -->
+                    <button type="submit" class="btn btn-warning w-100 fw-bold py-2 shadow-sm">دخول</button>
+                    <!-- رابط للتسجيل إذا لم يكن لدى المستخدم حساب -->
+                    <p class="text-center mt-3 small">
+                        ليس لديك حساب؟ 
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" class="text-warning fw-bold text-decoration-none">
+                            أنشئ حساباً الآن
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal لإنشاء حساب جديد -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <!-- صندوق الحوار المركزي للـ Modal -->
+    <div class="modal-dialog modal-dialog-centered">
+        <!-- محتوى الـ Modal مع ظل وحواف مستديرة -->
+        <div class="modal-content border-0 shadow-lg rounded-4">
+            <!-- رأس الـ Modal بدون حدود -->
+            <div class="modal-header border-0 pb-0">
+                <!-- زر الإغلاق -->
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- جسم الـ Modal -->
+            <div class="modal-body p-4 pt-0 text-end">
+                <!-- أيقونة وعنوان مركزي -->
+                <div class="text-center mb-4">
+                    <i class="fas fa-user-plus fa-4x text-warning mb-3"></i> <!-- أيقونة إنشاء حساب -->
+                    <h3 class="fw-bold">إنشاء حساب جديد</h3>
+                </div>
+                <!-- نموذج التسجيل -->
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">الاسم الكامل</label>
+                        <input type="text" class="form-control bg-light border-0 py-2" placeholder="أدخل اسمك" required>
+                        <!-- حقل الاسم الكامل -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">البريد الإلكتروني</label>
+                        <input type="email" class="form-control bg-light border-0 py-2" placeholder="name@example.com" required>
+                        <!-- حقل البريد الإلكتروني -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">كلمة المرور</label>
+                        <input type="password" class="form-control bg-light border-0 py-2" placeholder="********" required>
+                        <!-- حقل كلمة المرور -->
+                    </div>
+                    <!-- زر إرسال النموذج للتسجيل -->
+                    <button type="submit" class="btn btn-warning w-100 fw-bold py-2 shadow-sm">اشترك الآن</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- تحميل مكتبة jQuery -->
+    <script src="js/jquery-3.5.1.js"></script>
+    
+    <!-- تحميل مكتبة Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- تحميل ملف JS الخاص بالموقع -->
+    <script src="js/script.js"></script>
+    <script src="js/talents.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة اعادة الاعمار _ غزة </title>
+
+    <!-- تحميل مكتبة Bootstrap بنسخة RTL لدعم الكتابة من اليمين لليسار -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- تحميل أيقونات Font Awesome لاستخدام الأيقونات في الموقع -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- تحميل ملف CSS الخاص بالموقع -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- شاشة البداية / الشعار عند تحميل الموقع -->
+    <div id="splash-screen">
+        <img src="images/logo.png" alt="Logo" id="splash-logo">
+    </div>
+
+    <!-- رأس الموقع (الهيدر) مع شريط تنقل ثابت أعلى الصفحة -->
+    <header class="sticky-top bg-light shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            
+            <!-- شعار الموقع -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="50">
+            </a>
+            
+            <!-- زر القائمة للهواتف والأجهزة الصغيرة -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- روابط التنقل الرئيسية -->
+           <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">الرئيسية</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="projects.html" id="projectsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                المشاريع
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="projectsDrop">
+                <li><a class="dropdown-item" href="projects.html#ongoing-projects-area"><i class="fas fa-sync-alt ms-2"></i> مشاريع قيد التنفيذ</a></li>
+                <li><a class="dropdown-item" href="projects.html#finished-projects-area"><i class="fas fa-check-circle ms-2"></i> المشاريع المنجزة</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="projects.html"><i class="fas fa-list ms-2"></i> عرض كافة المشاريع</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="maintenance.html" id="maintenanceDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                الصيانة والترميم
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="maintenanceDrop">
+                <li><a class="dropdown-item" href="maintenance.html#emergency-repairs"><i class="fas fa-tools ms-2"></i> طلب ترميم عاجل</a></li>
+                <li><a class="dropdown-item" href="maintenance.html#maintenance-services"><i class="fas fa-hammer ms-2"></i> خدمات الصيانة</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="talents.html" id="talentsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                دليل الكفاءات
+            </a>
+            <ul class="dropdown-menu shadow-sm" aria-labelledby="talentsDrop">
+                <li><a class="dropdown-item" href="talents.html#find-talent"><i class="fas fa-search ms-2"></i> البحث عن خبير</a></li>
+                <li><a class="dropdown-item" href="talents.html#join-us"><i class="fas fa-user-plus ms-2"></i> انضم كخبير</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="adopt.html">تبنَّ إصلاحاً</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">تواصل معنا</a>
+        </li>
+    </ul>
+</div>
+
+            <!-- أزرار تسجيل الدخول والاشتراك على يمين الهيدر -->
+            <div class="d-flex">
+                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#loginModal">تسجيل دخول</button>
+                <button class="btn btn-warning fw-bold ms-2" data-bs-toggle="modal" data-bs-target="#registerModal">اشتراك</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسي -->
+    <main>
+        <!-- قسم الرئيسية مع سلايدر للصور -->
+        <section id="home" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- الصورة الأولى في السلايدر -->
+                <div class="carousel-item active">
+                    <img src="images/images4.jpg" class="d-block w-100" alt="صورة 1">
+                </div>
+                <!-- الصورة الثانية في السلايدر -->
+                <div class="carousel-item">
+                    <img src="images/images5.jpg" class="d-block w-100" alt="صورة 2">
+                </div>
+                 <!-- الصورة الثالثة في السلايدر -->
+                <div class="carousel-item">
+                    <img src="images/images9.jpg" class="d-block w-100" alt="صورة 2">
+                </div>
+            </div>
+
+            <!-- أزرار التنقل في السلايدر -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </section>
+
+        <!-- قسم عن الموقع -->
+       <section id="about" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-4 border-bottom d-inline-block pb-2 border-gold" style="border-width: 3px !important;">نبذة عن الموقع</h2>
+                <p class="lead text-dark lh-base">
+                    نحن نقدم حلولاً تقنية لدعم المجتمع وإعادة الإعمار في غزة. يهدف هذا الموقع إلى تقديم حلول وخدمات متكاملة تسهم في إعادة الإعمار ودعم المشاريع المجتمعية.
+                </p>
+                <p class="text-secondary">
+                    يتم تنفيذ المشاريع من قبل مهندسين وعمال مهرة، كما نتيح فرصاً للراغبين في العمل لتقليل حجم البطالة وتقديم خدمات الترميم والبناء للسوق المحلي بأسعار متوازنة.
+                </p>
+            </div>
+            
+            <div class="col-lg-5">
+                <div class="bg-white p-4 rounded-4 shadow-sm border-start border-gold border-5">
+                    <div class="text-center mb-3">
+                        <i class="fas fa-tools fa-3x text-gold"></i>
+                    </div>
+                    <h4 class="text-center fw-bold">خدماتنا التخصصية</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> ترميم وبناء الوحدات السكنية</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> دليل كفاءات للمهندسين والعمال</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> تسهيل التبرع للمشاريع العامة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- قسم المشاريع السابقة -->
+        <section id="projects" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">المشاريع السابقة</h2>
+                <div class="row" id="projects-container">
+                    <div class="col-md-4 mb-4">
+                        <!-- بطاقة المشروع -->
+                        <div class="card h-100 shadow-sm project-card">
+                            <img src="images/p1.jpg" class="card-img-top" alt="مشروع">
+                            <div class="card-body">
+                                <h5 class="card-title">اسم المشروع</h5>
+                                <p class="card-text text-muted">تاريخ الإنشاء: 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- الفوتر / قسم الاتصال -->
+    <footer id="contact" class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>جميع الحقوق محفوظة &copy; 2024 - جامعة الأقصى [cite: 89]</p>
+            <p>تواصل معنا: info@example.com | 0590000000</p>
+        </div>
+    </footer>
+
+    <!-- أيقونة الواتساب العائمة -->
+    <a href="https://wa.me/970590000000?text=مرحباً،%20أود%20الاستفسار%20عن%20مشاريع%20إعادة%20الإعمار" class="float-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<!-- Modal لتسجيل الدخول -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <!-- صندوق الحوار المركزي للـ Modal -->
+    <div class="modal-dialog modal-dialog-centered">
+        <!-- محتوى الـ Modal مع ظل وحواف مستديرة -->
+        <div class="modal-content border-0 shadow-lg rounded-4">
+            <!-- رأس الـ Modal بدون حدود لتقليل المسافة -->
+            <div class="modal-header border-0 pb-0">
+                <!-- زر الإغلاق -->
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- جسم الـ Modal مع حشو داخلي ومحاذاة النص لليمين -->
+            <div class="modal-body p-4 pt-0 text-end">
+                <!-- أيقونة وعنوان مركزي -->
+                <div class="text-center mb-4">
+                    <i class="fas fa-user-circle fa-4x text-warning mb-3"></i> <!-- أيقونة المستخدم -->
+                    <h3 class="fw-bold">تسجيل الدخول</h3>
+                </div>
+                <!-- نموذج تسجيل الدخول -->
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">البريد الإلكتروني</label>
+                        <input type="email" class="form-control bg-light border-0 py-2" placeholder="name@example.com" required>
+                        <!-- حقل البريد الإلكتروني مع تصميم Bootstrap -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">كلمة المرور</label>
+                        <input type="password" class="form-control bg-light border-0 py-2" placeholder="********" required>
+                        <!-- حقل كلمة المرور -->
+                    </div>
+                    <!-- زر إرسال النموذج -->
+                    <button type="submit" class="btn btn-warning w-100 fw-bold py-2 shadow-sm">دخول</button>
+                    <!-- رابط للتسجيل إذا لم يكن لدى المستخدم حساب -->
+                    <p class="text-center mt-3 small">
+                        ليس لديك حساب؟ 
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" class="text-warning fw-bold text-decoration-none">
+                            أنشئ حساباً الآن
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal لإنشاء حساب جديد -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <!-- صندوق الحوار المركزي للـ Modal -->
+    <div class="modal-dialog modal-dialog-centered">
+        <!-- محتوى الـ Modal مع ظل وحواف مستديرة -->
+        <div class="modal-content border-0 shadow-lg rounded-4">
+            <!-- رأس الـ Modal بدون حدود -->
+            <div class="modal-header border-0 pb-0">
+                <!-- زر الإغلاق -->
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- جسم الـ Modal -->
+            <div class="modal-body p-4 pt-0 text-end">
+                <!-- أيقونة وعنوان مركزي -->
+                <div class="text-center mb-4">
+                    <i class="fas fa-user-plus fa-4x text-warning mb-3"></i> <!-- أيقونة إنشاء حساب -->
+                    <h3 class="fw-bold">إنشاء حساب جديد</h3>
+                </div>
+                <!-- نموذج التسجيل -->
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">الاسم الكامل</label>
+                        <input type="text" class="form-control bg-light border-0 py-2" placeholder="أدخل اسمك" required>
+                        <!-- حقل الاسم الكامل -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">البريد الإلكتروني</label>
+                        <input type="email" class="form-control bg-light border-0 py-2" placeholder="name@example.com" required>
+                        <!-- حقل البريد الإلكتروني -->
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">كلمة المرور</label>
+                        <input type="password" class="form-control bg-light border-0 py-2" placeholder="********" required>
+                        <!-- حقل كلمة المرور -->
+                    </div>
+                    <!-- زر إرسال النموذج للتسجيل -->
+                    <button type="submit" class="btn btn-warning w-100 fw-bold py-2 shadow-sm">اشترك الآن</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- تحميل مكتبة jQuery -->
+    <script src="js/jquery-3.5.1.js"></script>
+    
+    <!-- تحميل مكتبة Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- تحميل ملف JS الخاص بالموقع -->
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
